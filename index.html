@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Bot Invitation</title>
+    <title>Discord Bot Reviews</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -25,9 +25,38 @@
 
         p {
             color: #555;
+            margin-bottom: 30px;
         }
 
-        .invite-button {
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .submit-button {
             display: inline-block;
             padding: 10px 20px;
             font-size: 16px;
@@ -39,18 +68,26 @@
             transition: background-color 0.3s;
         }
 
-        .invite-button:hover {
+        .submit-button:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Discord Bot Invitation</h1>
+        <h1>Discord Bot Reviews</h1>
     </header>
     <main>
-        <p>Welcome to the Discord Bot website. Click the button below to invite the bot to your server.</p>
-        <a class="invite-button" href="YOUR_BOT_INVITE_URL_HERE" target="_blank">Invite Bot</a>
+        <p>We'd love to hear your thoughts! Leave a review below.</p>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+            <input type="submit" class="submit-button" value="Submit Review">
+        </form>
     </main>
 </body>
 </html>
