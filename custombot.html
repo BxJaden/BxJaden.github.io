@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Request Form</title>
+    <script src="popup.js" defer></script>
+</head>
+<body>
+    <button onclick="showPopup()">Join Discord</button>
+
+    <form id="botRequestForm" action="submit.php" method="post" style="display: none;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="discord">Discord:</label>
+        <input type="text" id="discord" name="discord" required><br>
+        
+        <label for="botType">Bot Type:</label>
+        <input type="text" id="botType" name="botType" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
