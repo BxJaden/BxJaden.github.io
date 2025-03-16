@@ -1,5 +1,4 @@
 <?php
-// Validate and process the form data
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $discord = $_POST["discord"];
