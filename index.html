@@ -10,14 +10,29 @@
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
     h1 {
       color: #4b9cd3;
-      background-color: #ffffff;
       padding: 15px;
+      background-color: #ffffff;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       font-size: 2rem;
+      margin-bottom: 20px;
     }
     .btn {
       background-color: #4b9cd3;
@@ -46,33 +61,27 @@
 </head>
 <body>
 
-<div class="text-center sm:min-w-0 sm:flex sm:items-center sm:justify-end mt-6">
-  <h1 class="inline-block backdrop-filter backdrop-blur-md bg-opacity-30 px-3 rounded-2xl text-2xl font-bold text-black dark:text-white">
-    Terms Of Service
-  </h1>
-</div>
+<div class="container">
+  <h1>Terms Of Service</h1>
 
-<div class="max-w-7xl mx-auto pb-12 px-3 xl:px-0 space-y-6 w-full mt-10">
-  <div x-show="active === 'terms'" x-transition:enter="transition ease-out duration-300 delay-75 origin-top" x-transition:enter-start="opacity-0 transform scale-y-90" x-transition:enter-end="opacity-100 transform scale-y-100" data-tab-name="terms" data-tab-label="Terms">
-    <div class="mx-auto bg-white dark:bg-slate-900 shadow-lg rounded-2xl p-6 prose dark:prose-invert prose-sm sm:prose dark:text-white">
-      <p><strong><em>Upon using the services provided by DiscoTech Discord Bot Services, you are expected to comply with the following terms and conditions:</em></strong></p>
-      <p><strong>Prohibition of Redistribution:</strong> You are expressly forbidden from sharing or redistributing any content obtained from DiscoTech Discord Bot Services unless you have received prior written authorization from DiscoTech Discord Bot Services.</p>
-      <p><strong>Content Ownership:</strong> You are not permitted to assert ownership over any content unless it was specifically created for you on a commissioned basis.</p>
-      <p><strong>Right to Remove and or Hold Services:</strong> We reserve the right to remove or hold any of our services if we believe you have violated our terms or any legal laws.</p>
-      <p><strong>Content Alteration:</strong> Without prior written authorization, you are not allowed to edit, modify, duplicate, or adapt any aspect of the content.</p>
-      <p><strong>Attribution of Authorship:</strong> You are strictly prohibited from attributing the creation of purchased products to anyone other than DiscoTech Discord Bot Services.</p>
-      <p><strong>Usage at Your Own Risk:</strong> You bear the responsibility for using the content at your own risk, including compliance with intellectual property rights.</p>
-      <p><strong>Ownership of Assets:</strong> All properties created remain the exclusive property of DiscoTech Discord Bot Services.</p>
-      <p><strong>Asset Removal:</strong> In cases where assets are identified on Discord servers without consent, we retain the right to submit a DMCA takedown request.</p>
-      <p><strong>Accountability for Leaks:</strong> If assets are leaked, you are responsible for the breach.</p>
-      <p><strong>Right to Decline Service:</strong> DiscoTech reserves the authority to deny service to any individual, entity, or community.</p>
-      <p><strong>Breach Consequences:</strong> Violating any terms may result in suspension of services or termination of your account.</p>
-      <p><strong>By utilizing our services, you acknowledge these terms and agree to comply with them.</strong></p>
-    </div>
+  <div class="prose">
+    <p><strong><em>Upon using the services provided by DiscoTech Discord Bot Services, you are expected to comply with the following terms and conditions:</em></strong></p>
+    <p><strong>Prohibition of Redistribution:</strong> You are expressly forbidden from sharing or redistributing any content obtained from DiscoTech Discord Bot Services unless you have received prior written authorization from DiscoTech Discord Bot Services.</p>
+    <p><strong>Content Ownership:</strong> You are not permitted to assert ownership over any content unless it was specifically created for you on a commissioned basis.</p>
+    <p><strong>Right to Remove and or Hold Services:</strong> We reserve the right to remove or hold any of our services if we believe you have violated our terms or any legal laws.</p>
+    <p><strong>Content Alteration:</strong> Without prior written authorization, you are not allowed to edit, modify, duplicate, or adapt any aspect of the content.</p>
+    <p><strong>Attribution of Authorship:</strong> You are strictly prohibited from attributing the creation of purchased products to anyone other than DiscoTech Discord Bot Services.</p>
+    <p><strong>Usage at Your Own Risk:</strong> You bear the responsibility for using the content at your own risk, including compliance with intellectual property rights.</p>
+    <p><strong>Ownership of Assets:</strong> All properties created remain the exclusive property of DiscoTech Discord Bot Services.</p>
+    <p><strong>Asset Removal:</strong> In cases where assets are identified on Discord servers without consent, we retain the right to submit a DMCA takedown request.</p>
+    <p><strong>Accountability for Leaks:</strong> If assets are leaked, you are responsible for the breach.</p>
+    <p><strong>Right to Decline Service:</strong> DiscoTech reserves the authority to deny service to any individual, entity, or community.</p>
+    <p><strong>Breach Consequences:</strong> Violating any terms may result in suspension of services or termination of your account.</p>
+    <p><strong>By utilizing our services, you acknowledge these terms and agree to comply with them.</strong></p>
   </div>
 
   <div class="flex justify-center mt-6">
-    <a href="/" class="btn">Back to Home</a>
+    <a href="https://shop.discotech.online" class="btn">Back to Home</a>
   </div>
 </div>
 
