@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms Of Service</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service - DiscoTech Discord Bot Services</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 dark:from-gray-800 dark:via-gray-900 dark:to-black">
+<body class="bg-gradient-to-r from-gray-100 via-blue-50 to-gray-100 dark:bg-gray-900 dark:text-gray-200">
   <!-- Theme Toggle Button -->
   <div class="absolute top-4 right-4">
-    <button id="theme-toggle" class="p-2 rounded-full focus:outline-none bg-white dark:bg-gray-700 shadow-lg transition duration-300" aria-label="Toggle Theme">
-      <!-- Moon Icon (shown when light mode is active) -->
-      <svg id="theme-toggle-dark-icon" class="w-6 h-6 hidden text-gray-600 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 shadow-md focus:outline-none" aria-label="Toggle Theme">
+      <!-- Dark mode icon (moon) -->
+      <svg id="theme-toggle-dark-icon" class="w-6 h-6 hidden text-gray-800 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20">
         <path d="M17.293 13.293a8 8 0 01-11.586 0 8 8 0 0111.586 0z"></path>
       </svg>
-      <!-- Sun Icon (shown when dark mode is active) -->
+      <!-- Light mode icon (sun) -->
       <svg id="theme-toggle-light-icon" class="w-6 h-6 hidden text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
         <path d="M10 15a5 5 0 100-10 5 5 0 000 10z"></path>
       </svg>
@@ -31,63 +31,71 @@
   </div>
 
   <!-- Main Content -->
-  <div class="flex items-center justify-center min-h-screen px-4">
-    <div class="max-w-2xl w-full p-10 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700">
-      <h1 class="text-4xl font-bold text-center text-indigo-600 dark:text-indigo-400 mb-6 drop-shadow-lg">Terms Of Service</h1>
-      <div class="prose dark:prose-dark text-gray-700 dark:text-gray-300">
-        <p><strong><em>Upon using the services provided by DiscoTech Discord Bot Services, you are expected to comply with the following terms and conditions:</em></strong></p>
-        <p><strong>Prohibition of Redistribution:</strong> You are expressly forbidden from sharing or redistributing any content obtained from DiscoTech Discord Bot Services unless you have received prior written authorization.</p>
-        <p><strong>Content Ownership:</strong> You are not permitted to assert ownership over any content unless it was specifically created for you on a commissioned basis.</p>
-        <p><strong>Right to Remove and or Hold Services:</strong> We reserve the right to remove or hold any of our services if we believe you have violated our terms or any legal laws.</p>
-        <p><strong>Content Alteration:</strong> Without prior written authorization, you are not allowed to edit, modify, duplicate, or adapt any aspect of the content.</p>
-        <p><strong>Attribution of Authorship:</strong> You are strictly prohibited from attributing the creation of purchased products to anyone other than DiscoTech Discord Bot Services.</p>
-        <p><strong>Usage at Your Own Risk:</strong> You bear the responsibility for using the content at your own risk, including compliance with intellectual property rights.</p>
-        <p><strong>Ownership of Assets:</strong> All properties created remain the exclusive property of DiscoTech Discord Bot Services.</p>
-        <p><strong>Asset Removal:</strong> In cases where assets are identified on Discord servers without consent, we retain the right to submit a DMCA takedown request.</p>
-        <p><strong>Accountability for Leaks:</strong> If assets are leaked, you are responsible for the breach.</p>
-        <p><strong>Right to Decline Service:</strong> DiscoTech reserves the authority to deny service to any individual, entity, or community.</p>
-        <p><strong>Breach Consequences:</strong> Violating any terms may result in suspension of services or termination of your account.</p>
-        <p><strong>By utilizing our services, you acknowledge these terms and agree to comply with them.</strong></p>
-      </div>
-      <div class="flex justify-center mt-8">
-        <a href="https://shop.discotech.online" class="inline-block px-8 py-3 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-semibold rounded-lg transition-colors duration-300">Back to Home</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Theme Toggle Script -->
-  <script>
-    // Check for saved user preference, if any, on initial load
-    if (localStorage.getItem('theme') === 'dark' || 
-        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-
-    // Get the toggle icons
-    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
-    // Display the correct icon on page load
-    if (document.documentElement.classList.contains('dark')) {
-      themeToggleLightIcon.classList.remove('hidden');
-    } else {
-      themeToggleDarkIcon.classList.remove('hidden');
-    }
-
-    // Toggle theme and update localStorage
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-      themeToggleDarkIcon.classList.toggle('hidden');
-      themeToggleLightIcon.classList.toggle('hidden');
-      if (document.documentElement.classList.contains('dark')) {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      } else {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-  </script>
-</body>
-</html>
+  <div class="flex items-center justify-center min-h-screen p-6">
+    <div class="w-full max-w-4xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-2xl p-8">
+      <header class="mb-8 text-center">
+        <h1 class="text-5xl font-extrabold text-blue-600 dark:text-blue-300">Terms of Service</h1>
+        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Effective Date: [Insert Effective Date]</p>
+      </header>
+      <article class="space-y-8 text-lg leading-relaxed">
+        <section>
+          <p>
+            This Terms of Service Agreement ("Agreement") constitutes a legally binding contract between you ("User") and DiscoTech Discord Bot Services ("Service Provider"). By accessing or using our services, you acknowledge and agree to be bound by all the terms and conditions set forth herein. If you do not agree with any part of this Agreement, you must immediately cease using our services.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">1. License and Use of Services</h2>
+          <p>
+            The Service Provider grants you a limited, non-exclusive, non-transferable, and revocable license to use our services strictly in accordance with this Agreement. Unauthorized reproduction, modification, or redistribution of our services is strictly prohibited.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">2. Intellectual Property Rights</h2>
+          <p>
+            All content provided through our services, including text, images, logos, and software, is the property of DiscoTech Discord Bot Services or its licensors. No part of the content may be copied, reproduced, or exploited without our express written permission.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">3. Prohibition of Redistribution</h2>
+          <p>
+            You are expressly forbidden from redistributing, reselling, or sharing any content or service provided by DiscoTech Discord Bot Services without prior written consent.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">4. Modification and Termination of Services</h2>
+          <p>
+            We reserve the right to modify, suspend, or terminate our services at any time without notice. Such actions may be taken if you violate this Agreement or if required by law.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">5. Disclaimer of Warranties</h2>
+          <p>
+            Our services are provided "as is" and "as available," without any express or implied warranties. We do not guarantee that the services will be uninterrupted, secure, or error-free.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">6. Limitation of Liability</h2>
+          <p>
+            In no event shall DiscoTech Discord Bot Services be liable for any indirect, incidental, consequential, or punitive damages arising from your use of our services, even if advised of the possibility of such damages.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">7. Indemnification</h2>
+          <p>
+            You agree to indemnify and hold harmless DiscoTech Discord Bot Services, its affiliates, and their respective officers, directors, employees, and agents from any claims or damages arising out of your use of our services or breach of this Agreement.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">8. Governing Law and Jurisdiction</h2>
+          <p>
+            This Agreement shall be governed by and construed in accordance with the laws of the jurisdiction in which DiscoTech operates. You consent to the exclusive jurisdiction of the courts within this jurisdiction for any disputes arising out of this Agreement.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">9. Amendments and Modifications</h2>
+          <p>
+            We reserve the right to amend or modify this Agreement at any time. Continued use of our services after any such changes constitutes your acceptance of the new terms.
+          </p>
+        </section>
+        <section>
+... (75 lines left)
