@@ -24,7 +24,7 @@
             background-color: #45a049;
         }
 
-        /* The Modal (background) */
+        /* Modal */
         .modal {
             display: none; 
             position: fixed;
@@ -48,7 +48,6 @@
             border-radius: 10px;
         }
 
-        /* Close Button */
         .close {
             color: #aaa;
             float: right;
@@ -63,7 +62,7 @@
             cursor: pointer;
         }
 
-        /* Style for form elements */
+        /* Form Elements */
         form label, form input, form button {
             width: 100%;
             margin: 10px 0;
@@ -87,16 +86,26 @@
         form button:hover {
             background-color: #45a049;
         }
+
+        .user-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body>
+
+<!-- Display User Info -->
+<div id="user-info" class="user-info">
+    <!-- User info will be inserted here after login -->
+</div>
 
 <!-- Button to open the form -->
 <button id="openFormBtn">Request a Bot</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
-    <!-- Modal Content -->
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Bot Request Form</h2>
@@ -116,31 +125,26 @@
 </div>
 
 <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("openFormBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
+    // Login button to redirect to Discord OAuth2
+    const loginUrl = "https://discord.com/oauth2/authorize?client_id=1118403131114524725&response_type=code&redirect_uri=http%3A%2F%2Fterms.bxjaden524.xyz%2Fcallback&scope=identify";
+    
+    // Open OAuth2 login if not logged in
+    if (!localStorage.getItem('discordUser')) {
+        window.location.href = loginUrl;
+    } else {
+        const user = JSON.parse(localStorage.getItem('discordUser'));
+        document.getElementById('user-info').innerHTML = `Logged in as ${user.username}#${user.discriminator}`;
     }
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
+    // Open the modal to request a bot
+    document.getElementById('openFormBtn').onclick = function() {
+        document.getElementById('myModal').style.display = "block";
+    };
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
+    // Close the modal
+    document.getElementsByClassName('close')[0].onclick = function() {
+        document.getElementById('myModal').style.display = "none";
+    };
 </script>
 
 </body>
