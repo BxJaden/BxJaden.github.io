@@ -1,31 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms Of Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+    }
+    h1 {
+      color: #4b9cd3;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 2rem;
+    }
+    .btn {
+      background-color: #4b9cd3;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #357bbd;
+    }
+    .prose p {
+      text-align: left;
+      font-size: 1.1rem;
+    }
+    .prose strong {
+      color: #333;
+    }
+    .prose em {
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-<div class="text-center sm:min-w-0 sm:flex sm:items-center sm:justify-end mt-2">
+
+<div class="text-center sm:min-w-0 sm:flex sm:items-center sm:justify-end mt-6">
   <h1 class="inline-block backdrop-filter backdrop-blur-md bg-opacity-30 px-3 rounded-2xl text-2xl font-bold text-black dark:text-white">
     Terms Of Service
   </h1>
 </div>
-<div class="max-w-7xl mx-auto pb-52 px-3 xl:px-0 space-y-4 w-full">
+
+<div class="max-w-7xl mx-auto pb-12 px-3 xl:px-0 space-y-6 w-full mt-10">
   <div x-show="active === 'terms'" x-transition:enter="transition ease-out duration-300 delay-75 origin-top" x-transition:enter-start="opacity-0 transform scale-y-90" x-transition:enter-end="opacity-100 transform scale-y-100" data-tab-name="terms" data-tab-label="Terms">
-    <div class="mx-auto bg-white dark:bg-slate-900 shadow-sm rounded-2xl p-5 sm:p-6 prose dark:prose-invert prose-sm sm:prose dark:text-white">
+    <div class="mx-auto bg-white dark:bg-slate-900 shadow-lg rounded-2xl p-6 prose dark:prose-invert prose-sm sm:prose dark:text-white">
       <p><strong><em>Upon using the services provided by DiscoTech Discord Bot Services, you are expected to comply with the following terms and conditions:</em></strong></p>
-      <p style="text-align: center"><strong>Prohibition of Redistribution:</strong> You are expressly forbidden from sharing or redistributing any content obtained from DiscoTech Discord Bot Services unless you have received prior written authorization from DiscoTech Discord Bot Services. This prohibition extends to a broad range of digital assets, including, but not limited to, Discord bots, scripts, code, graphics, videos, and more.</p>
-      <p style="text-align: center"><strong>Content Ownership:</strong> You are not permitted to assert ownership over any content unless it was specifically created for you on a commissioned basis.</p>
-      <p style="text-align: center"><strong>Right to Remove and or Hold Services:</strong> We here at DiscoTech reserve the right to remove or hold any of our services that have already been before-hand purchased. If we feel as if you have violated our TOS, or any legal laws then we will exercise this right.</p>
-      <p style="text-align: center"></p><strong>Content Alteration:</strong> Without obtaining prior written authorization from a member of the Executive Staff at DiscoTech Discord Bot Services, you are not allowed to edit, modify, duplicate, or adapt any aspect of the content, whether it involves design, size, color, or format.</p>
-      <p style="text-align: center"><strong>Attribution of Authorship:</strong> You are strictly prohibited from attributing the creation of purchased products to anyone other than DiscoTech Discord Bot Services.</p>
-      <p style="text-align: center"><strong>Usage at Your Own Risk:</strong> You, along with your server and community, bear the responsibility for using the content at your own risk. This includes compliance with intellectual property rights, as defined and enforced by Discord and other relevant platforms. DiscoTech Discord Bot Services and its developers bear no responsibility for any harm caused to your account, server, hardware, or any related issues.</p>
-      <p style="text-align: center"><strong>Ownership of Assets:</strong> All properties created remain the exclusive property of DiscoTech Discord Bot Services. Your purchase grants you a permanent lease for personal usage, within a single location at any given time.</p>
-      <p style="text-align: center"><strong>Asset Removal:</strong> In cases where our assets are identified on any Discord server without our consent, we retain the right to submit a DMCA takedown request through Discord's trust and safety team. Such an action could result in the removal of the assets and disciplinary measures taken against the accounts involved.</p>
-      <p style="text-align: center"><strong>Accountability for Leaks:</strong> If you grant access to assets within a Discord channel, VPS, or any other location, and someone with access leaks these assets, you are entirely responsible for this breach, subject to the consequences detailed below.</p>
-      <p style="text-align: center"><strong>Right to Decline Service:</strong> DiscoTech Discord Bot Services reserves the authority to deny service, or specific services, to any individual, entity, or community, with or without a specific justification for such denial.</p>
-      <p style="text-align: center"><strong>Breach Consequences:</strong> Violation of any of the aforementioned agreements may lead to a range of consequences, including, but not limited to, the cessation of all future purchases, the resale of your commission to offset our losses, and the revocation of your status as a customer of DiscoTech Discord Bot Services. In severe instances, your Discord account could face termination due to the infringement of our intellectual property rights.</p>
-      <p style="text-align: center">By utilizing our services, you acknowledge these terms and conditions as legally binding, and you pledge to adhere to them during your interaction with DiscoTech Discord Bot Services.</p>
+      <p><strong>Prohibition of Redistribution:</strong> You are expressly forbidden from sharing or redistributing any content obtained from DiscoTech Discord Bot Services unless you have received prior written authorization from DiscoTech Discord Bot Services.</p>
+      <p><strong>Content Ownership:</strong> You are not permitted to assert ownership over any content unless it was specifically created for you on a commissioned basis.</p>
+      <p><strong>Right to Remove and or Hold Services:</strong> We reserve the right to remove or hold any of our services if we believe you have violated our terms or any legal laws.</p>
+      <p><strong>Content Alteration:</strong> Without prior written authorization, you are not allowed to edit, modify, duplicate, or adapt any aspect of the content.</p>
+      <p><strong>Attribution of Authorship:</strong> You are strictly prohibited from attributing the creation of purchased products to anyone other than DiscoTech Discord Bot Services.</p>
+      <p><strong>Usage at Your Own Risk:</strong> You bear the responsibility for using the content at your own risk, including compliance with intellectual property rights.</p>
+      <p><strong>Ownership of Assets:</strong> All properties created remain the exclusive property of DiscoTech Discord Bot Services.</p>
+      <p><strong>Asset Removal:</strong> In cases where assets are identified on Discord servers without consent, we retain the right to submit a DMCA takedown request.</p>
+      <p><strong>Accountability for Leaks:</strong> If assets are leaked, you are responsible for the breach.</p>
+      <p><strong>Right to Decline Service:</strong> DiscoTech reserves the authority to deny service to any individual, entity, or community.</p>
+      <p><strong>Breach Consequences:</strong> Violating any terms may result in suspension of services or termination of your account.</p>
+      <p><strong>By utilizing our services, you acknowledge these terms and agree to comply with them.</strong></p>
     </div>
   </div>
+
+  <div class="flex justify-center mt-6">
+    <a href="/" class="btn">Back to Home</a>
+  </div>
 </div>
+
 </body>
 </html>
